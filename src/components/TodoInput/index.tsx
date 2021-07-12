@@ -9,7 +9,6 @@ const TodoInput: FC = (): ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const addItem = (e: React.KeyboardEvent): void => {
-    
     //判断当前点击的是否是回车键
     if (e.key !== "Enter") {
       return;
@@ -20,6 +19,7 @@ const TodoInput: FC = (): ReactElement => {
     if (val.length) {
       //查看当前输入的待办事项是否已经存在
       const isExist = store.todoList.find((todo) => todo.content === val);
+
       //输入的事项已经存在，弹窗提醒
       if (isExist) {
         alert("已存在该项,请勿重复输入！");

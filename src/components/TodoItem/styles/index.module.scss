@@ -30,6 +30,14 @@
     .itemText {
       margin-left: 5px;
       font-size: 13px;
+      width: 400px;
+    }
+    .isFinished{ 
+      font-size: 10px;
+      width: 80px;
+      height: 100%;
+      text-align: center;
+      color: rgb(83, 81, 81);
     }
     .deleteBtn {
       // 让删除按钮垂直居中
