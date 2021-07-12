@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from "react";
 import { observer } from "mobx-react";
 import { useStore } from "../../store";
 import { ITodo } from "../../types";
-import "./styles/index.scss";
+import tdItemStyle from "./styles/index.module.scss";
 
 interface IProps {
   todo: ITodo;
@@ -12,7 +12,7 @@ const TodoItem: FC<IProps> = ({ todo }): ReactElement => {
   const store = useStore();
   return (
     <div
-      className="todoItem"
+      className={tdItemStyle.todoItem}
       style={{
         background: todo.finished ? "rgb(219, 219, 219)" : "rgb(204, 237, 252)",
       }}

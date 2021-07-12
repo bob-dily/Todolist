@@ -3,7 +3,6 @@ import { observer } from "mobx-react";
 import TodoItem from "../TodoItem";
 import { ITodo } from "../../types";
 import { useStore } from "../../store";
-import "./styles/index.scss";
 
 const List: FC = (): ReactElement => {
   const store = useStore();

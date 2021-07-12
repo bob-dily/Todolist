@@ -2,7 +2,7 @@ import React, { FC, ReactElement, useEffect } from "react";
 import { observer } from "mobx-react";
 import TodoInput from "../TodoInput";
 import List from "../List";
-import "./styles/index.scss";
+import tdListStyle from "./styles/index.module.scss";
 import { useStore } from "../../store";
 
 const TodoList: FC = (): ReactElement => {
@@ -14,7 +14,7 @@ const TodoList: FC = (): ReactElement => {
   }, [store.todoList,store.todoList.length]);
 
   return (
-    <div className="todoList">
+    <div className={tdListStyle.todoList}>
       <h3>TODOLIST</h3>
       <TodoInput />
       <List />

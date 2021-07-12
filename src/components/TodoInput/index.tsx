@@ -1,7 +1,7 @@
 import React, { useRef, FC, ReactElement } from "react";
 import { observer } from "mobx-react";
 import { useStore } from "../../store";
-import "./styles/index.scss";
+import tdInputStyle from "./styles/index.module.scss";
 
 const TodoInput: FC = (): ReactElement => {
   const store = useStore();
@@ -38,7 +38,7 @@ const TodoInput: FC = (): ReactElement => {
   };
 
   return (
-    <div className="todoInput">
+    <div className={tdInputStyle.todoInput}>
       <input
         className="input"
         type="text"
